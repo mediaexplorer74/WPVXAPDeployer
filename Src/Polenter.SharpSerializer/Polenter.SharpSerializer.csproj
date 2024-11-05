@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5060949F-054A-4EFB-816F-F9F062F1E98F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Polenter.SharpSerializer</AssemblyName>
+    <ApplicationVersion>2.10.0.0</ApplicationVersion>
+    <RootNamespace>Polenter.Serialization</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SharpSerializer.cs" />
+    <Compile Include="SharpSerializerXmlSettings.cs" />
+    <Compile Include="SharpSerializerBinarySettings.cs" />
+    <Compile Include="BinarySerializationMode.cs" />
+    <Compile Include="ExcludeFromSerializationAttribute.cs" />
+    <Compile Include="Core\SharpSerializerSettings`1.cs" />
+    <Compile Include="Core\Tools.cs" />
+    <Compile Include="Core\Property.cs" />
+    <Compile Include="Core\NullProperty.cs" />
+    <Compile Include="Core\PropertyCollection.cs" />
+    <Compile Include="Core\SimpleProperty.cs" />
+    <Compile Include="Core\ComplexProperty.cs" />
+    <Compile Include="Core\ComplexReferenceProperty.cs" />
+    <Compile Include="Core\CollectionProperty.cs" />
+    <Compile Include="Core\DictionaryProperty.cs" />
+    <Compile Include="Core\SingleDimensionalArrayProperty.cs" />
+    <Compile Include="Core\MultiDimensionalArrayProperty.cs" />
+    <Compile Include="Core\MultiDimensionalArrayItem.cs" />
+    <Compile Include="Core\DimensionInfo.cs" />
+    <Compile Include="Core\KeyValueItem.cs" />
+    <Compile Include="Core\DeserializingException.cs" />
+    <Compile Include="Core\CreatingInstanceException.cs" />
+    <Compile Include="Core\AdvancedSharpSerializerSettings.cs" />
+    <Compile Include="Core\AdvancedSharpSerializerXmlSettings.cs" />
+    <Compile Include="Core\AdvancedSharpSerializerBinarySettings.cs" />
+    <Compile Include="Core\ArrayAnalyzer.cs" />
+    <Compile Include="Core\ArrayInfo.cs" />
+    <Compile Include="Core\DefaultInitializer.cs" />
+    <Compile Include="Core\SimpleValueParsingException.cs" />
+    <Compile Include="Core\Binary\BinaryWriterTools.cs" />
+    <Compile Include="Core\Binary\IndexGenerator`1.cs" />
+    <Compile Include="Core\Binary\BinaryReaderTools.cs" />
+    <Compile Include="Core\Binary\Elements.cs" />
+    <Compile Include="Core\Binary\SubElements.cs" />
+    <Compile Include="Core\Binary\Attributes.cs" />
+    <Compile Include="Core\Binary\NumberSize.cs" />
+    <Compile Include="Core\Xml\Elements.cs" />
+    <Compile Include="Core\Xml\SubElements.cs" />
+    <Compile Include="Core\Xml\Attributes.cs" />
+    <Compile Include="Advanced\TypeNameConverter.cs" />
+    <Compile Include="Advanced\SimpleValueConverter.cs" />
+    <Compile Include="Advanced\XmlPropertySerializer.cs" />
+    <Compile Include="Advanced\PropertyProvider.cs" />
+    <Compile Include="Advanced\PropertiesToIgnore.cs" />
+    <Compile Include="Advanced\SizeOptimizedBinaryReader.cs" />
+    <Compile Include="Advanced\SizeOptimizedBinaryWriter.cs" />
+    <Compile Include="Advanced\DefaultXmlReader.cs" />
+    <Compile Include="Advanced\DefaultXmlWriter.cs" />
+    <Compile Include="Advanced\BurstBinaryWriter.cs" />
+    <Compile Include="Advanced\BurstBinaryReader.cs" />
+    <Compile Include="Advanced\BinaryPropertySerializer.cs" />
+    <Compile Include="Advanced\BinaryPropertyDeserializer.cs" />
+    <Compile Include="Advanced\XmlPropertyDeserializer.cs" />
+    <Compile Include="Advanced\Binary\IBinaryWriter.cs" />
+    <Compile Include="Advanced\Binary\IBinaryReader.cs" />
+    <Compile Include="Advanced\Serializing\IPropertySerializer.cs" />
+    <Compile Include="Advanced\Serializing\PropertySerializer.cs" />
+    <Compile Include="Advanced\Serializing\ITypeNameConverter.cs" />
+    <Compile Include="Advanced\Xml\ISimpleValueConverter.cs" />
+    <Compile Include="Advanced\Xml\IXmlWriter.cs" />
+    <Compile Include="Advanced\Xml\IXmlReader.cs" />
+    <Compile Include="Advanced\Deserializing\IPropertyDeserializer.cs" />
+    <Compile Include="Serializing\TypeInfo.cs" />
+    <Compile Include="Serializing\TypeInfoCollection.cs" />
+    <Compile Include="Serializing\PropertyFactory.cs" />
+    <Compile Include="Serializing\PropertyTypeInfo`1.cs" />
+    <Compile Include="Deserializing\ObjectFactory.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
