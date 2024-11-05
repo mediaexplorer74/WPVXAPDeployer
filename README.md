@@ -13,7 +13,7 @@ My attempt to recover discontinued *WPV XAP Deployer* WPF project. via fast R.E.
 
 ## Status
 - Draft. Prototype / Alpha version.
-- Smart.Device.Connectivity feature damaged (some Win system dlls not found?) 
+- Smart.Device.Connectivity feature damaged (some WindowsPhone 8/8.1 system dlls not found?) 
 
 ## Credits / References
 - http://winphoneviet.com (Obsolete link to original WPV XAP Deployer)
